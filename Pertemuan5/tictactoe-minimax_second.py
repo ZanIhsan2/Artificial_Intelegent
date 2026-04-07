@@ -106,25 +106,3 @@ while True:
     if is_board_full(board):
         print("🤝 Seri!")
         break
-def hill_climbing_move(board):
-    print("⛰️ AI Hill Climbing sedang mencari langkah terbaik saat ini...")
-    best_score = -math.inf
-    best_move = -1
-    
-    for i in range(9):
-        if board[i] == ' ':
-            board[i] = 'O'
-            # Skor sederhana: 10 jika menang sekarang, 0 jika tidak
-            score = 10 if check_winner(board, 'O') else 0
-            board[i] = ' '
-            
-            if score > best_score:
-                best_score = score
-                best_move = i
-                
-    # Jika tidak ada langkah yang langsung menang, pilih langkah pertama yang tersedia
-    if best_move == -1:
-        for i in range(9):
-            if board[i] == ' ': return i
-            
-    return best_move
