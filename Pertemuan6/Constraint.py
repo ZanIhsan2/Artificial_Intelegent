@@ -5,9 +5,9 @@
 # 1. Definisi Peta (Tetangga)
 # Contoh: 'Jawa' bertetangga dengan 'Sumatera' dan 'Kalimantan'
 peta_stt_nf = {
-    'Sumatera': ['Jawa'],
+    'Sumatera': ['Jawa', 'Kalimantan'],
     'Jawa': ['Sumatera', 'Kalimantan'],
-    'Kalimantan': ['Jawa', 'Sulawesi'],
+    'Kalimantan': ['Sumatera', 'Jawa', 'Sulawesi'],
     'Sulawesi': ['Kalimantan', 'Papua'],
     'Papua': ['Sulawesi']
 }
